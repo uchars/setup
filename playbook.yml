@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - base
+
+- hosts: x200
+  become: yes
+  roles:
+    - x200
+
