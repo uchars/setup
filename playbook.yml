@@ -23,6 +23,7 @@
       - mpv
       - gimp
       - audacity
+      - wget
     dotfiles_repo: "https://github.com/uchars/.files"
     dwm_repo: "https://github.com/uchars/dwm"
 
@@ -42,6 +43,20 @@
     - name: Install yay (AUR helper)
       pacman:
         name: yay
+        state: present
+      become: yes
+
+    - name: Install Thunar file manager with required plugins
+      pacman:
+        name:
+          - thunar
+          - thunar-archive-plugin
+          - thunar-volman
+          - gvfs
+          - gvfs-smb
+          - gvfs-afc
+          - gvfs-google
+          - tumbler
         state: present
       become: yes
 
