@@ -1,0 +1,9 @@
+shared_packages:
+  - neovim
+  - tmux
+  - git
+  - base-devel
+  - xorg-xsetroot
+dotfiles_repo: "https://github.com/uchars/.files"
+dwm_repo: "https://github.com/uchars/dwm"
+
