@@ -8,12 +8,16 @@
       - git
       - base-devel
       - xorg-xsetroot
+      - xclip
       - discord
       - fzf
       - tealdeer
       - libfido2
+      - python-pipx
       - android-udev
       - yt-dlp
+      - cmake
+      - ninja
       - zathura
       - bitwarden
       - feh
@@ -46,6 +50,11 @@
         state: present
       become: yes
 
+    - name: Set Git user name and email
+      shell: |
+        git config --global user.name "Nils"
+        git config --global user.email "40796807+uchars@users.noreply.github.com"
+
     - name: Install Thunar file manager with required plugins
       pacman:
         name:
@@ -60,6 +69,13 @@
         state: present
       become: yes
 
+    - name: yubikey stuff
+      become: yes
+      ansible.builtin.service:
+        name: pcscd
+        enabled: yes
+        state: started
+
     - name: Install Fonts
       become: yes
       command: yay -S --noconfirm ttf-sourcecodepro-nerd
@@ -69,7 +85,7 @@
       become: yes
 
     - name: Change shell to bash
-      command: chsh -s /bin/bash
+      command: chsh -s /usr/bin/bash
       become: yes
 
     - name: Clone dotfiles repo
@@ -147,6 +163,32 @@
         chdir: "{{ ansible_facts['env']['HOME'] }}/.files"
       become: false
 
+    - name: Install nvm
+      shell: |
+        curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh
+        creates="{{ ansible_facts['env']['HOME'] }}/.nvm/nvm.sh"
+
+    - name: Install node and set version
+      shell: |
+        /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
+        creates=/home/{{ ansible_user_id }}/.nvm/alias
+
+    - name: Install Konsave
+      command: pipx install konsave
+
+    - name: Konsave pip stuff
+      command: pipx inject konsave setuptools
+
+    - name: Load KDE Config
+      args:
+        chdir: "{{ ansible_facts['env']['HOME'] }}/.files"
+      command: konsave -i kde_profiles/desktop.knsv
+
+    - name: Apply KDE Config
+      args:
+        chdir: "{{ ansible_facts['env']['HOME'] }}/.files"
+      command: konsave -a desktop
+
     - name: Clone DWM repo
       git:
         repo: "{{ dwm_repo }}"
@@ -177,4 +219,3 @@
         group: root
         mode: '0644'
       become: yes
-
