@@ -15,7 +15,6 @@ pipewire
 ripgrep
 fd
 openssh
-localsend
 haruna
 vlc
 chromium
@@ -27,7 +26,7 @@ plymouth
 base-devel
 libx11
 libxft
-xorg-xserver
+xorg-server
 xorg-xinit
 xorg-xsetroot
 libfido2
@@ -43,12 +42,12 @@ thunar-volman
 ffmpegthumbnailer
 tumbler
 libgsf
-gvs-mtp
+gvfs-mtp
 
 # Network
 networkmanager
 nm-connection-editor
-network-manager-applett
+network-manager-applet
 
 # Gaming
 gamescope
