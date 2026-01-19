@@ -1,1 +1,5 @@
 yubico-authenticator-bin
+steam-native-runtime
+steamcmd
+tumbler-extra-thumbnailer
+clock-tui

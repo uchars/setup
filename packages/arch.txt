@@ -1,4 +1,6 @@
+# Essentials
 polkit
+alacritty
 feh
 xclip
 pcsclite
@@ -8,6 +10,20 @@ chezmoi
 neovim
 vim
 ttf-sourcecodepro-nerd
+vim 
+pipewire
+ripgrep
+fd
+openssh
+localsend
+haruna
+vlc
+chromium
+firefox
+emacs
+plymouth
+
+# Build depencencies
 base-devel
 libx11
 libxft
@@ -15,9 +31,32 @@ xorg-xserver
 xorg-xinit
 xorg-xsetroot
 libfido2
-vim 
-openssh
-NetworkManager
+
+# Graphical file browser
+thunar
+gvfs
+thunar-archive-plugin
+ark
+thunar-media-tags-plugin
+thunar-shares-plugin
+thunar-volman
+ffmpegthumbnailer
+tumbler
+libgsf
+gvs-mtp
+
+# Network
+networkmanager
+nm-connection-editor
+network-manager-applett
+
+# Gaming
+gamescope
+mangohud
+discord
+obs-studio
+
+# System Stuff
 bluez
 bluez-utils
 bluetui
@@ -26,7 +65,11 @@ cups-pdf
 hplip
 print-manager
 brightnessctl
-alacritty
+scrot
+
+# Art 
 krita
 blender
 inkscape
+fastfetch
+opentoonz
