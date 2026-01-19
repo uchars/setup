@@ -1,0 +1,8 @@
+polkit
+xclip
+pcsclite
+ccid
+rofi
+chezmoi
+neovim
+ttf-sourcecodepro-nerd

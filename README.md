@@ -1,2 +1,4 @@
-ansible-playbook -i inventory.ini playbook.yml -K
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/uchars/setup/master/bootstrap_installer.sh)"
+```
 
