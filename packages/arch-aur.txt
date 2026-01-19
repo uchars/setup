@@ -3,4 +3,3 @@ steam-native-runtime
 steamcmd
 tumbler-extra-thumbnailer
 clock-tui
-localsend-bin
