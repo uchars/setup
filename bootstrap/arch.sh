@@ -23,11 +23,6 @@ else
   log "yay already installed"
 fi
 
-aur_install() {
-  yay -S --noconfirm --needed "$@"
-}
-export -f aur_install
-
 if [[ -f packages/arch.txt ]]; then
   log "Installing pacman packages"
   sudo pacman -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
@@ -35,7 +30,6 @@ fi
 
 if [[ -f packages/arch-aur.txt ]]; then
   log "Installing AUR packages"
-  mapfile -t aur_pkgs < packages/arch-aur.txt
-  [[ ${#aur_pkgs[@]} -gt 0 ]] && aur_install "${aur_pkgs[@]}"
+  yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch-aur.txt)
 fi
 

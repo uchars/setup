@@ -1,0 +1,72 @@
+
+==> Arch / CachyOS bootstrap
+
+==> Installing base packages
+ there is nothing to do
+
+==> yay already installed
+
+==> Installing pacman packages
+ there is nothing to do
+
+==> Installing AUR packages
+:: [1mThere are 2 providers available for lib32-libdrm:
+:: [1mRepository AUR
+    [0m1) lib32-libdrm-git 2) lib32-libdrm-ps4 [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 4 providers available for libjpeg6:
+:: [1mRepository AUR
+    [0m1) jpegli-git 2) libjpeg-turbo-official 3) libjpeg6-turbo 4) libjpeg6-turbo-bin [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 25 providers available for lib32-vulkan-driver:
+:: [1mRepository AUR
+    [0m1) lib32-amdonly-gaming-vulkan-radeon-git 2) lib32-amdvlk 3) lib32-amdvlk-2021q2.5 4) lib32-amdvlk-2023q3.3 5) lib32-amdvlk-bin 6) lib32-amdvlk-git 7) lib32-mesa-git 8) lib32-mesa-minimal-git 9) lib32-mesa-ps4 10) lib32-nvidia-390xx-utils 11) lib32-nvidia-430xx-utils 12) lib32-nvidia-470xx-utils 13) lib32-nvidia-510xx-utils 14) lib32-nvidia-525xx-utils 15) lib32-nvidia-535xx-utils 16) lib32-nvidia-550xx-utils 17) lib32-nvidia-580xx-utils 18) lib32-nvidia-utils-beta 19) lib32-nvidia-vulkan-utils 20) lib32-vulkan-amdgpu-pro 21) lib32-vulkan-amdgpu-pro-legacy 22) lib32-vulkan-nouveau-git 23) lib32-vulkan-radeon-amd-bc250 24) lib32-vulkan-terakan 25) lib32-vulkan-terakan-git [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 2 providers available for lib32-libjpeg6:
+:: [1mRepository AUR
+    [0m1) lib32-libjpeg6-turbo 2) lib32-libjpeg6-turbo-bin [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 6 providers available for lib32-mesa:
+:: [1mRepository AUR
+    [0m1) lib32-mesa-git 2) lib32-mesa-minimal-git 3) lib32-mesa-ps4 4) lib32-vulkan-terakan-git 5) lib32-amdonly-gaming-mesa-git 6) lib32-mesa-amd-bc250 [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 2 providers available for lib32-llvm:
+:: [1mRepository AUR
+    [0m1) lib32-llvm-git 2) lib32-llvm-minimal-git [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 2 providers available for lib32-clang:
+:: [1mRepository AUR
+    [0m1) lib32-llvm-git 2) lib32-clang-minimal-git [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 2 providers available for lib32-spirv-llvm-translator:
+:: [1mRepository AUR
+    [0m1) lib32-spirv-llvm-translator-git 2) lib32-spirv-llvm-translator-minimal-git [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 2 providers available for lib32-llvm-libs:
+:: [1mRepository AUR
+    [0m1) lib32-llvm-libs-git 2) lib32-llvm-libs-minimal-git [0m
+
+Enter a number (default=1): 
+1
+:: [1mThere are 3 providers available for lib32-libgl:
+:: [1mRepository AUR
+    [0m1) lib32-amdgpu-pro-oglp 2) lib32-amdgpu-pro-oglp-legacy 3) lib32-nvidia-340xx-utils [0m
+
+Enter a number (default=1): 
+1
