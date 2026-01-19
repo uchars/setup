@@ -14,21 +14,21 @@ install_pacman() {
 log "Installing base packages"
 install_pacman base-devel git curl
 
-if ! command_exists paru; then
-  log "Installing paru (AUR helper)"
+if ! command_exists yay; then
+  log "Installing yay (AUR helper)"
   tmpdir="$(mktemp -d)"
   trap 'rm -rf "$tmpdir"' EXIT
 
-  git clone https://aur.archlinux.org/paru.git "$tmpdir/paru"
-  pushd "$tmpdir/paru" >/dev/null
+  git clone https://aur.archlinux.org/yay.git "$tmpdir/yay"
+  pushd "$tmpdir/yay" >/dev/null
   makepkg -si --noconfirm
   popd >/dev/null
 else
-  log "paru already installed"
+  log "yay already installed"
 fi
 
 aur_install() {
-  paru -S --noconfirm --needed "$@"
+  yay -S --noconfirm --needed "$@"
 }
 export -f aur_install
 

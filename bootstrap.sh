@@ -3,6 +3,7 @@ set -euo pipefail
 
 TMPDIR="$(mktemp -d)"
 trap 'rm -rf "$TMPDIR"' EXIT
+sudo pacman -S --noconfirm --needed git
 
 echo "==> Cloning setup repo..."
 git clone --depth 1 https://github.com/uchars/setup.git "$TMPDIR/setup"

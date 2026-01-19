@@ -17,6 +17,7 @@ enable_service() {
 
 enable_service NetworkManager
 enable_service bluetooth
+enable_service cups
 
 git config --global user.name "Nils"
 git config --global user.email "40796807+uchars@users.noreply.github.com"
