@@ -34,7 +34,7 @@ export -f aur_install
 
 if [[ -f packages/arch.txt ]]; then
   log "Installing pacman packages"
-  sudo pacman -S --noconfirm --needed - < packages/arch.txt
+  sudo pacman -S --noconfirm --needed - < $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
 fi
 
 if [[ -f packages/arch-aur.txt ]]; then
