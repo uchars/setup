@@ -11,7 +11,7 @@ log "Detected distro: $DISTRO"
 
 case "$DISTRO" in
   arch|cachyos)
-    source "$ROOT_DIR/bootstrap/arch.sh"
+    source "$ROOT_DIR/bootstrap/arch.sh" | tee bootstrap.log
     ;;
   *)
     log "Unsupported distro: $DISTRO"
