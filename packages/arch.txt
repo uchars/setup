@@ -7,3 +7,4 @@ rofi
 chezmoi
 neovim
 ttf-sourcecodepro-nerd
+xorg-xsetroot
