@@ -7,12 +7,8 @@ is_installed() {
   pacman -Qi "$1" &>/dev/null
 }
 
-install_pacman() {
-  sudo pacman -S --noconfirm --needed "$@"
-}
-
 log "Installing base packages"
-install_pacman base-devel git curl
+sudo pacman -S --noconfirm --needed base-devel git curl
 
 if ! command_exists yay; then
   log "Installing yay (AUR helper)"
@@ -34,7 +30,7 @@ export -f aur_install
 
 if [[ -f packages/arch.txt ]]; then
   log "Installing pacman packages"
-  sudo pacman -S --noconfirm --needed - < $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
+  sudo pacman -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
 fi
 
 if [[ -f packages/arch-aur.txt ]]; then
