@@ -1,4 +1,5 @@
 polkit
+feh
 xclip
 pcsclite
 ccid

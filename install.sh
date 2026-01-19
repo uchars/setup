@@ -20,6 +20,7 @@ case "$DISTRO" in
 esac
 
 source "$ROOT_DIR/system/system.sh"
+source "$ROOT_DIR/system/dwm.sh"
 log "Applying dotfiles"
 chezmoi init https://github.com/uchars/dotfiles.git
 
