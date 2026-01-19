@@ -6,20 +6,6 @@ if ! command_exists plymouth; then
 	exit 0;
 fi
 
-if ! grep -q 'plymouth' /etc/mkinitcpio.conf; then
-	log "adding plymouth to mkinitcpio"
-	if [[ ! -f "$HOME/.local/mkinitcpio.bak" ]]; then
-		log "creating backup of initial mkinitcpio"
-		cp /etc/mkinitcpio.conf $HOME/.local/mkinitcpio.bak
-	else
-		log "backup of initial mkinitcpio is already present in $HONE/.local/mkinitcpio.bak"
-	fi
-	sudo sed -i 's/^HOOKS=(\(.*\))$/HOOKS=(\1 plymouth)/' /etc/mkinitcpio.conf
-	sudo mkinitcpio -P
-else
-	log "plymouth is already present in mkinitcpio"
-fi
-
 log "adding 'splash quiet loglevel=3' to boot entries"
 BOOT_ENTRIES_DIR="/boot/loader/entries"
 find $BOOT_ENTRIES_DIR -maxdepth 1 -name '*.conf' -type f | while read -r entry; do
@@ -34,6 +20,30 @@ find $BOOT_ENTRIES_DIR -maxdepth 1 -name '*.conf' -type f | while read -r entry;
         fi
     fi
 done
+
+if ! grep -q 'plymouth' /etc/mkinitcpio.conf; then
+	log "adding plymouth to mkinitcpio"
+	if [[ ! -f "$HOME/.local/mkinitcpio.bak" ]]; then
+		log "creating backup of initial mkinitcpio"
+		cp /etc/mkinitcpio.conf $HOME/.local/mkinitcpio.bak
+	else
+		log "backup of initial mkinitcpio is already present in $HOME/.local/mkinitcpio.bak"
+	fi
+
+    # TODO: handle placing after systemd
+    #if echo "$hooks_line" | grep -q 'systemd'; then
+    #    log "placing plymouth after systemd"
+    #    new_hooks_line=$(echo "$hooks_line" | sed 's/\(systemd\)/\1 plymouth/')
+    #else
+    #    log "placing plymouth at the third position"
+    #    new_hooks_line=$(echo "$hooks_line" | sed -E 's/HOOKS=\((^ ]+ [^ ]+)/HOOKS=(\1 plymouth/')
+    #fi
+    sudo sed -i -E 's/^(HOOKS=\([[:space:]]*[^[:space:]]+[[:space:]]+[^[:space:]]+[[:space:]]*)/\1plymouth /' "/etc/mkinitcpio.conf"
+	sudo mkinitcpio -P
+    log "added plymouth"
+else
+	log "plymouth is already present in mkinitcpio"
+fi
 
 log "adding image to the spinner plymouth theme"
 THEME_NAME="spinner"

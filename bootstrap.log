@@ -6,6 +6,9 @@
 
 ==> yay already installed
 
+==> install nvidia stuff
+ there is nothing to do
+
 ==> enable multilib for pacman
 
 ==> added correct line for multilib

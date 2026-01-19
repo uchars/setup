@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ENABLE_NVIDIA=false
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export ROOT_DIR
 
 source "$ROOT_DIR/scripts/helpers.sh"
+
+for arg in "$@"; do
+    case "$arg" in
+        --nvidia)
+        log "enable nvidia support"
+        ENABLE_NVIDIA=true
+        ;;
+    esac
+done
+export ENABLE_NVIDIA
 
 DISTRO="$(. /etc/os-release && echo "$ID")"
 log "Detected distro: $DISTRO"

@@ -25,3 +25,16 @@ git config --global user.email "40796807+uchars@users.noreply.github.com"
 log "Rebuilding font cache"
 fc-cache -fv &>/dev/null || true
 
+if [[ "${ENABLE_NVIDIA:-false}" == "true" ]]; then
+    log "configure nvidia in mkinitcpio"
+    MKINIT="/etc/mkinitcpio.conf"
+    MODULES_LINE="MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)"
+
+    if ! grep -q "nvidia_drm" "$MKINIT"; then
+        log "updating mkinitcpio modules"
+        sudo sed -i "s/^MODULES=.*/$MODULES_LINE/" "$MKINIT"
+        sudo mkinitcpio -P
+    else
+        log "nvidia modules already present in $MKINIT"
+    fi
+fi

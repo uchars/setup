@@ -23,6 +23,11 @@ else
   log "yay already installed"
 fi
 
+if [[ "${ENABLE_NVIDIA:-false}" == "true" ]]; then
+    log "install nvidia stuff"
+    sudo pacman -S --noconfirm --needed nvidia-open nvidia-settings nvidia-utils
+fi
+
 PACMAN_CONF="/etc/pacman.conf"
 log "enable multilib for pacman"
 if ! grep -q "^\[multilib\]" "$PACMAN_CONF"; then

@@ -9,6 +9,7 @@ rofi
 chezmoi
 neovim
 vim
+tmux
 ttf-sourcecodepro-nerd
 vim
 pipewire
