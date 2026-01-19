@@ -23,6 +23,21 @@ else
   log "yay already installed"
 fi
 
+PACMAN_CONF="/etc/pacman.conf"
+log "enable multilib for pacman"
+if ! grep -q "^\[multilib\]" "$PACMAN_CONF"; then
+	echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a "$PACMAN_CONF"
+	log "added multilib section to pacman conf"
+else
+	if ! grep -q "^\[multilib\]" -A 1 "$PACMAN_CONF" | grep -q "^Include = /etc/pacman.d/mirrorlist"; then
+		sudo sed -i "/^\[multilib\]/a Include = /etc/pacman.d/mirrorlist" "$PACMAN_CONF"
+		log "added correct line for multilib"
+	else
+		log "multilib already added correctly"
+	fi
+fi
+sudo pacman -Syy
+
 if [[ -f packages/arch.txt ]]; then
   log "Installing pacman packages"
   sudo pacman -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
@@ -32,4 +47,3 @@ if [[ -f packages/arch-aur.txt ]]; then
   log "Installing AUR packages"
   yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch-aur.txt)
 fi
-

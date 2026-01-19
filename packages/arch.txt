@@ -10,7 +10,7 @@ chezmoi
 neovim
 vim
 ttf-sourcecodepro-nerd
-vim 
+vim
 pipewire
 ripgrep
 fd
@@ -51,6 +51,7 @@ network-manager-applet
 
 # Gaming
 gamescope
+steam
 mangohud
 discord
 obs-studio
@@ -66,7 +67,7 @@ print-manager
 brightnessctl
 scrot
 
-# Art 
+# Art
 krita
 blender
 inkscape

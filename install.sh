@@ -20,6 +20,7 @@ case "$DISTRO" in
 esac
 
 source "$ROOT_DIR/system/system.sh"
+source "$ROOT_DIR/system/plymouth.sh"
 source "$ROOT_DIR/system/dwm.sh"
 source "$ROOT_DIR/system/npm.sh"
 log "Applying dotfiles"
