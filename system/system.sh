@@ -24,3 +24,15 @@ git config --global user.email "40796807+uchars@users.noreply.github.com"
 log "Rebuilding font cache"
 fc-cache -fv &>/dev/null || true
 
+
+TARGET_SHELL="/bin/bash"
+
+if command_exists bash; then
+  # Only change shell if it's not already bash
+  if [[ "$SHELL" != "$TARGET_SHELL" ]]; then
+      log "Changing default shell to $TARGET_SHELL..."
+      chsh -s "$TARGET_SHELL"
+  else
+      log "Default shell is already bash, skipping"
+  fi
+fi

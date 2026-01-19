@@ -21,6 +21,7 @@ esac
 
 source "$ROOT_DIR/system/system.sh"
 source "$ROOT_DIR/system/dwm.sh"
+source "$ROOT_DIR/system/npm.sh"
 log "Applying dotfiles"
 chezmoi init https://github.com/uchars/dotfiles.git
 
