@@ -8,3 +8,4 @@ chezmoi
 neovim
 ttf-sourcecodepro-nerd
 xorg-xsetroot
+libfido2

@@ -21,13 +21,11 @@ else
 fi
 
 WALLPAPER="$ROOT_DIR/wallpapers/foggy_mountain.jpg"
-WALLPAPER_FILE="$HOME/.config/dwm/wallpaper"
 if command_exists feh; then
     mkdir -p "$HOME/.config/dwm"
 
-    if [[ ! -f "$WALLPAPER_FILE" ]]; then
+    if [[ ! -f "$HOME/.fehbg" ]]; then
         log "Setting default dwm wallpaper from setup repo..."
-        echo "$WALLPAPER" > "$WALLPAPER_FILE"
         feh --bg-scale "$WALLPAPER" &>/dev/null || true
     else
         log "Wallpaper file exists, leaving it unchanged"
