@@ -6,6 +6,7 @@ ccid
 rofi
 chezmoi
 neovim
+vim
 ttf-sourcecodepro-nerd
 base-devel
 libx11
