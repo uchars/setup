@@ -20,6 +20,21 @@ else
 	log "plymouth is already present in mkinitcpio"
 fi
 
+log "adding 'splash quiet loglevel=3' to boot entries"
+BOOT_ENTRIES_DIR="/boot/loader/entries"
+find $BOOT_ENTRIES_DIR -maxdepth 1 -name '*.conf' -type f | while read -r entry; do
+    log "checking $entry"
+    [ -f "$entry" ] || continue
+    if grep -q '^options' "$entry"; then
+        if ! grep -q '^options .*splash' "$entry"; then
+            sudo sed -i \
+                '/^options / s/$/ splash quiet loglevel=3/' \
+                "$entry"
+            log "appended plymouth lines to options of $entry"
+        fi
+    fi
+done
+
 log "adding image to the spinner plymouth theme"
 THEME_NAME="spinner"
 THEME_DIR="/usr/share/plymouth/themes/$THEME_NAME"
