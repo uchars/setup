@@ -8,7 +8,7 @@ is_installed() {
 }
 
 log "Installing base packages"
-sudo pacman -S --noconfirm --needed base-devel git curl
+sudo pacman -S --noconfirm --needed base-devel git curl pipewire
 
 if ! command_exists yay; then
   log "Installing yay (AUR helper)"

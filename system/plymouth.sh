@@ -46,11 +46,10 @@ else
 fi
 
 log "adding image to the spinner plymouth theme"
-THEME_NAME="spinner"
+THEME_NAME="simple-image"
 THEME_DIR="/usr/share/plymouth/themes/$THEME_NAME"
-PLYMOUTH_IMAGE="$ROOT_DIR/wallpapers/foggy_mountain.jpg"
-sudo cp "$PLYMOUTH_IMAGE" "$THEME_DIR/background-tile.jpg"
-sudo chmod 644 "$THEME_DIR/background-tile.jpg"
+PLYMOUTH_IMAGE="$ROOT_DIR/wallpapers/foggy_mountain.png"
+sudo cp "$PLYMOUTH_IMAGE" "$THEME_DIR/img.png"
 
 sudo plymouth-set-default-theme -R $THEME_NAME
 
