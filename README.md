@@ -1,4 +1,4 @@
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/uchars/setup/master/bootstrap.sh)"
+curl -fsSL https://raw.githubusercontent.com/uchars/setup/master/bootstrap.sh | bash
 ```
 
