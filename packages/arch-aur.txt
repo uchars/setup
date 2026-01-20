@@ -4,3 +4,5 @@ plymouth-theme-simple-image-git
 clock-tui
 pipemixer
 cavasik
+xp-pen-tablet
+rofi-power-menu

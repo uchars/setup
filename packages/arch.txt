@@ -1,6 +1,7 @@
 # Essentials
 polkit
 alacritty
+jq
 feh
 xclip
 pcsclite
@@ -11,6 +12,8 @@ vim
 tmux
 ttf-sourcecodepro-nerd
 ttf-nerd-fonts-symbols
+ttf-jetbrains-mono-nerd
+ttf-jetbrains-mono
 vim
 fzf
 unzip
@@ -85,6 +88,7 @@ scrot
 
 # Sway
 sway
+swaybg
 swaylock
 swayidle
 wl-clipboard

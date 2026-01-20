@@ -2,6 +2,8 @@
 set -euo pipefail
 
 WALLPAPER="$ROOT_DIR/wallpapers/foggy_mountain.jpg"
+ln -s $WALLPAPER $HOME/.local/wallpaper.jpg
+
 if command_exists feh; then
     if [[ ! -f "$HOME/.fehbg" ]]; then
         log "Setting default wallpaper from setup repo..."
