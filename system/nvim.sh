@@ -3,6 +3,11 @@ set -euo pipefail
 
 NVIM_DIR="$HOME/work/neovim"
 NVIM_BRANCH="release-0.10"
+if ! command_exists cmake; then
+    log "cmake not installed"
+    exit 0
+fi
+
 if ! command_exists nvim; then
     log "Installing Neovim ($NVIM_BRANCH) from source..."
 
@@ -18,7 +23,6 @@ if ! command_exists nvim; then
     make clean
     make CMAKE_BUILD_TYPE=Release -j$(nproc)
     sudo make install
-    popd >/dev/null
 
     log "Neovim installation complete"
 else
