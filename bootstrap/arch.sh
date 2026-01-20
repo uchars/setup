@@ -52,3 +52,5 @@ if [[ -f packages/arch-aur.txt ]]; then
   log "Installing AUR packages"
   yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch-aur.txt)
 fi
+
+systemctl --user  enable --now pipewire pipewire-pulse wireplumber

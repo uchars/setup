@@ -22,8 +22,6 @@ fi
 
 WALLPAPER="$ROOT_DIR/wallpapers/foggy_mountain.jpg"
 if command_exists feh; then
-    mkdir -p "$HOME/.config/dwm"
-
     if [[ ! -f "$HOME/.fehbg" ]]; then
         log "Setting default dwm wallpaper from setup repo..."
         feh --bg-scale "$WALLPAPER" &>/dev/null || true
