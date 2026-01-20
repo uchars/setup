@@ -43,14 +43,14 @@ else
 fi
 sudo pacman -Syy
 
-if [[ -f packages/arch.txt ]]; then
+if [[ -f $ROOT_DIR/packages/arch.txt ]]; then
   log "Installing pacman packages"
-  sudo pacman -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch.txt)
+  sudo pacman -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' $ROOT_DIR/packages/arch.txt)
 fi
 
-if [[ -f packages/arch-aur.txt ]]; then
+if [[ -f $ROOT_DIR/packages/arch-aur.txt ]]; then
   log "Installing AUR packages"
-  yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' packages/arch-aur.txt)
+  yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' $ROOT_DIR/packages/arch-aur.txt)
 fi
 
 systemctl --user  enable --now pipewire pipewire-pulse wireplumber
