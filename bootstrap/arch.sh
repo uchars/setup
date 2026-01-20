@@ -25,7 +25,7 @@ fi
 
 if [[ "${ENABLE_NVIDIA:-false}" == "true" ]]; then
     log "install nvidia stuff"
-    sudo pacman -S --noconfirm --needed nvidia-open nvidia-settings nvidia-utils
+    sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-settings nvidia-utils
 fi
 
 PACMAN_CONF="/etc/pacman.conf"
