@@ -34,6 +34,7 @@ esac
 source "$ROOT_DIR/system/system.sh"
 source "$ROOT_DIR/system/plymouth.sh"
 source "$ROOT_DIR/system/dwm.sh"
+source "$ROOT_DIR/system/wallpaper.sh"
 source "$ROOT_DIR/system/npm.sh"
 source "$ROOT_DIR/system/nvim.sh"
 log "Applying dotfiles"

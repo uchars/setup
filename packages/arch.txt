@@ -10,6 +10,7 @@ chezmoi
 vim
 tmux
 ttf-sourcecodepro-nerd
+ttf-nerd-fonts-symbols
 vim
 fzf
 unzip
@@ -32,6 +33,8 @@ pipewire-alsa
 pipewire-pulse
 pipewire-docs
 wiremix
+pulsemixer
+cava
 
 # Build depencencies
 ninja
@@ -79,6 +82,14 @@ hplip
 print-manager
 brightnessctl
 scrot
+
+# Sway
+sway
+swaylock
+swayidle
+wl-clipboard
+wofi
+waybar
 
 # Art
 krita
