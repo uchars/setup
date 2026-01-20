@@ -23,7 +23,7 @@ log "Detected distro: $DISTRO"
 
 case "$DISTRO" in
   arch|cachyos)
-    source "$ROOT_DIR/bootstrap/arch.sh" | tee bootstrap.log
+    source "$ROOT_DIR/bootstrap/arch.sh" | tee $HOME/.local/bootstrap.log
     ;;
   *)
     log "Unsupported distro: $DISTRO"
@@ -31,12 +31,12 @@ case "$DISTRO" in
     ;;
 esac
 
-source "$ROOT_DIR/system/system.sh"
-source "$ROOT_DIR/system/plymouth.sh"
-source "$ROOT_DIR/system/dwm.sh"
-source "$ROOT_DIR/system/wallpaper.sh"
-source "$ROOT_DIR/system/npm.sh"
-source "$ROOT_DIR/system/nvim.sh"
+source "$ROOT_DIR/system/system.sh" | tee $HOME/.local/system.log
+source "$ROOT_DIR/system/plymouth.sh" | tee $HOME/.local/plymouth.log
+source "$ROOT_DIR/system/dwm.sh" | tee $HOME/.local/dwm.log
+source "$ROOT_DIR/system/wallpaper.sh" | tee $HOME/.local/wallpaper.log
+source "$ROOT_DIR/system/npm.sh" | tee $HOME/.local/npm.log
+source "$ROOT_DIR/system/nvim.sh" | tee $HOME/.local/nvim.log
 log "Applying dotfiles"
 chezmoi init --apply https://github.com/uchars/.files.git
 
