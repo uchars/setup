@@ -25,6 +25,7 @@ imagemagick
 less
 
 # Audio
+alsa-utils
 pipewire
 pipewire-alsa
 pipewire-pulse
