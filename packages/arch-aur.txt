@@ -2,3 +2,4 @@ yubico-authenticator-bin
 tumbler-extra-thumbnailer
 plymouth-theme-simple-image-git
 clock-tui
+pipemixer

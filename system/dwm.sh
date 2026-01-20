@@ -12,7 +12,7 @@ if ! command_exists dwm; then
 
     pushd "$DWM_DIR" >/dev/null
     make clean
-    sudo make install
+    sudo make install -j$(nproc)
     popd >/dev/null
 
     log "dwm installation complete"

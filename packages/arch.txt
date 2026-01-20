@@ -7,11 +7,12 @@ pcsclite
 ccid
 rofi
 chezmoi
-neovim
 vim
 tmux
 ttf-sourcecodepro-nerd
 vim
+fzf
+unzip
 ripgrep
 fd
 openssh
@@ -30,8 +31,11 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 pipewire-docs
+wiremix
 
 # Build depencencies
+ninja
+cmake
 base-devel
 libx11
 libxft
