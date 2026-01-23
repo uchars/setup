@@ -26,6 +26,11 @@ git config --global user.email "40796807+uchars@users.noreply.github.com"
 log "Rebuilding font cache"
 fc-cache -fv &>/dev/null || true
 
+if command_exists docker; then
+    sudo systemctl enable --now docker
+    sudo usermod -aG docker "$USER"
+fi
+
 if [[ "${ENABLE_NVIDIA:-false}" == "true" ]]; then
     log "configure nvidia in mkinitcpio"
     MKINIT="/etc/mkinitcpio.conf"

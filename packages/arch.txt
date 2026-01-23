@@ -1,5 +1,6 @@
 # Essentials
 polkit
+wget
 alacritty
 jq
 feh
@@ -11,6 +12,7 @@ chezmoi
 vim
 tmux
 ttf-sourcecodepro-nerd
+woff2-font-awesome
 ttf-nerd-fonts-symbols
 ttf-jetbrains-mono-nerd
 ttf-jetbrains-mono
@@ -50,9 +52,18 @@ xorg-xinit
 xorg-xsetroot
 libfido2
 
+# Wayland is the best thing that has ever been created something something linux desktop 202x
+xdg-desktop-portal
+xdg-desktop-portal-wlr
+wireplumber
+ffmpeg
+
+
 # Graphical file browser
 thunar
 gvfs
+gvfs-smb
+smbclient
 thunar-archive-plugin
 ark
 thunar-media-tags-plugin
@@ -62,6 +73,12 @@ ffmpegthumbnailer
 tumbler
 libgsf
 gvfs-mtp
+
+# Dev stuff
+intellij-idea-community-edition
+docker
+docker-compose
+fvm
 
 # Network
 networkmanager
@@ -77,6 +94,7 @@ obs-studio
 
 # System Stuff
 bluez
+breeze-gtk
 bluez-utils
 bluetui
 cups
