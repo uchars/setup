@@ -17,6 +17,7 @@ ttf-nerd-fonts-symbols
 ttf-jetbrains-mono-nerd
 ttf-jetbrains-mono
 vim
+man
 fzf
 unzip
 ripgrep
@@ -115,6 +116,7 @@ waybar
 
 # Art
 krita
+gimp
 blender
 inkscape
 fastfetch
