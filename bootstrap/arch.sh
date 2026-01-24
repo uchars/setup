@@ -54,3 +54,5 @@ if [[ -f $ROOT_DIR/packages/arch-aur.txt ]]; then
 fi
 
 systemctl --user enable --now pipewire pipewire-pulse wireplumber xppentablet.service gvfs-daemon
+
+source "$ROOT_DIR/bootstrap/arch-boot.sh"

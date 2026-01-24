@@ -44,3 +44,4 @@ if [[ "${ENABLE_NVIDIA:-false}" == "true" ]]; then
         log "nvidia modules already present in $MKINIT"
     fi
 fi
+

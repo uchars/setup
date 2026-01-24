@@ -21,7 +21,7 @@ if ! command_exists nvim; then
     git checkout "$NVIM_BRANCH"
 
     make clean
-    make CMAKE_BUILD_TYPE=Release -j$(nproc)
+    make CMAKE_BUILD_TYPE=Release -j$(($(nproc)/2))
     sudo make install
 
     log "Neovim installation complete"

@@ -7,3 +7,4 @@ cavasik
 xp-pen-tablet
 rofi-power-menu
 android-studio
+libcava
