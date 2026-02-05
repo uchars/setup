@@ -32,6 +32,11 @@ plymouth
 imagemagick
 less
 
+# Desktop stuff
+bitwarden
+plasma
+dolphin
+
 # Audio
 alsa-utils
 pipewire
@@ -54,23 +59,11 @@ xorg-xinit
 xorg-xsetroot
 libfido2
 
-# Wayland is the best thing that has ever been created something something linux desktop 202x
-wireplumber
-ffmpeg
-slurp
-grim
-
-
-# Graphical file browser
-thunar
+# File browser dependencies
 gvfs
 gvfs-smb
 smbclient
-thunar-archive-plugin
 ark
-thunar-media-tags-plugin
-thunar-shares-plugin
-thunar-volman
 ffmpegthumbnailer
 tumbler
 libgsf
