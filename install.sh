@@ -23,16 +23,19 @@ log "Detected distro: $DISTRO"
 
 case "$DISTRO" in
   arch|cachyos)
-    source "$ROOT_DIR/bootstrap/arch.sh" | tee $HOME/.local/bootstrap.log
-    ;;
+  source "$ROOT_DIR/bootstrap/arch.sh" | tee $HOME/.local/bootstrap.log
+  ;;
+  mint|debian)
+  source "$ROOT_DIR/bootstrap/mint.sh" | tee $HOME/.local/bootstrap-mint.log
+  ;;
   *)
-    log "Unsupported distro: $DISTRO"
-    exit 1
-    ;;
+  log "Unsupported distro: $DISTRO"
+  exit 1
+  ;;
 esac
 
 log "Applying dotfiles"
-chezmoi init --apply https://github.com/uchars/.files.git
+chezmoi init --apply https://github.com/uchars/.files.git --force
 
 source "$ROOT_DIR/system/system.sh" | tee $HOME/.local/system.log
 source "$ROOT_DIR/system/plymouth.sh" | tee $HOME/.local/plymouth.log

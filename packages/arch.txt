@@ -86,6 +86,9 @@ steam
 mangohud
 discord
 obs-studio
+wine
+wine-gecko
+wine-mono
 
 # System Stuff
 bluez

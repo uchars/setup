@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# When sourced by install.sh we must not call `exit` here; use `return` so the
+# parent script continues.
 NVIM_DIR="$HOME/work/neovim"
 NVIM_BRANCH="release-0.10"
 if ! command_exists cmake; then
     log "cmake not installed"
-    exit 0
+    return 0
 fi
 
 if ! command_exists nvim; then
@@ -24,6 +26,7 @@ if ! command_exists nvim; then
     make CMAKE_BUILD_TYPE=Release -j$(($(nproc)/2))
     sudo make install
 
+    popd >/dev/null
     log "Neovim installation complete"
 else
     log "Neovim already installed, skipping"

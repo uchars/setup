@@ -53,6 +53,6 @@ if [[ -f $ROOT_DIR/packages/arch-aur.txt ]]; then
   yay -S --noconfirm --needed $(grep -vE '^\s*#|^\s*$' $ROOT_DIR/packages/arch-aur.txt)
 fi
 
-systemctl --user enable --now pipewire pipewire-pulse wireplumber xppentablet.service gvfs-daemon
+systemctl --user enable --now pipewire pipewire-pulse wireplumber gvfs-daemon
 
 source "$ROOT_DIR/bootstrap/arch-boot.sh"

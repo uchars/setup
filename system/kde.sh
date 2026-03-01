@@ -11,9 +11,20 @@ if command_exists konsave; then
     fi
 fi
 
-sudo systemctl enable sddm
-
 SDDM_CONF="$ROOT_DIR/configs/sddm_autologin.conf"
 SDDM_CONF_DIR="/etc/sddm.conf.d"
-sudo mkdir -p $SDDM_CONF_DIR
-sudo cp "$SDDM_CONF" "$SDDM_CONF_DIR/autologin.conf"
+
+if command_exists plasmalogin; then
+    log "plasmalogin detected"
+    if systemctl list-unit-files | grep -q plasmalogin.service; then
+        sudo systemctl enable plasmalogin
+    fi
+    sudo cp "$SDDM_CONF" "/etc/plasmalogin.conf"
+elif command_exists sddm; then
+    log "sddm detected"
+    sudo systemctl enable sddm
+    sudo mkdir -p "$SDDM_CONF_DIR"
+    sudo cp "$SDDM_CONF" "$SDDM_CONF_DIR/autologin.conf"
+else
+    log "No supported display manager (sddm or plasmalogin) found"
+fi

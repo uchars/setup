@@ -11,3 +11,4 @@ rofi-power-menu
 android-studio
 libcava
 visual-studio-code-bin
+bottles

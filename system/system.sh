@@ -12,7 +12,7 @@ fi
 # ---- services ------------------------------------------------
 
 enable_service() {
-  sudo systemctl is-enabled "$1" &>/dev/null || sudo systemctl enable "$1"
+  sudo systemctl is-enabled "$1" &>/dev/null || sudo systemctl enable --now "$1"
 }
 
 enable_service NetworkManager

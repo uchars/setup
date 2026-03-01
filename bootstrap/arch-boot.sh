@@ -7,12 +7,12 @@ log "setting up arch boot entries..."
 # sanity checks
 if [ ! -d "$BOOT_ENTRY_DIR" ]; then
   log "entry directory not found, skipping systemd-boot configuration"
-  exit 0
+  return 0
 fi
 
 if [ ! -f "$BOOT_CONF_FILE" ]; then
   log "loader.conf not found, skipping systemd-boot configuration"
-  exit 0
+  return 0
 fi
 
 log "configuring systemd-boot"
@@ -22,7 +22,7 @@ NEWEST_ENTRY="$(ls -1 "$BOOT_ENTRY_DIR"/*.conf 2>/dev/null | sort | tail -n 1)"
 
 if [ -z "$NEWEST_ENTRY" ]; then
   log "no boot entries found, skipping"
-  exit 0
+  return 0
 fi
 
 NEWEST_BASENAME="$(basename "$NEWEST_ENTRY")"

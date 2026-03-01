@@ -3,11 +3,16 @@ set -euo pipefail
 
 if ! command_exists plymouth; then
 	log "Plymouth not installed"
-	exit 0;
+	return 0
+fi
+
+BOOT_ENTRIES_DIR="/boot/loader/entries"
+if [[ ! -d $BOOT_ENTRIES_DIR ]]; then
+    log "Boot entries dir does not exist"
+    return 0
 fi
 
 log "adding 'splash quiet loglevel=3' to boot entries"
-BOOT_ENTRIES_DIR="/boot/loader/entries"
 find $BOOT_ENTRIES_DIR -maxdepth 1 -name '*.conf' -type f | while read -r entry; do
     log "checking $entry"
     [ -f "$entry" ] || continue
