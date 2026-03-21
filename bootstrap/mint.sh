@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Mint/Ubuntu-specific bootstrap installer
-# - checks availability of requested packages
-# - installs via apt where possible
-# - falls back to flatpak for some apps
-# - builds Krita from source (latest stable tag)
-
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source "$ROOT_DIR/scripts/helpers.sh"
 
@@ -26,17 +20,7 @@ install_apt_if_available() {
 	fi
 }
 
-install_flatpak_if_available() {
-	local id="$1"
-	if flatpak search --show-details "$id" | grep -qi "$id"; then
-		log "Installing flatpak: $id"
-		sudo flatpak install -y "$id" || log "flatpak install failed for $id"
-		return 0
-	else
-		log "Flatpak $id not found in flathub search"
-		return 1
-	fi
-}
+# flatpak installs delegated to scripts/helpers.sh -> install_flatpaks()
 
 bootstrap_mint() {
 	ensure_sudo
@@ -66,18 +50,8 @@ bootstrap_mint() {
 		sudo usermod -aG docker "$USER" || true
 	fi
 
-	if ! command -v flatpak >/dev/null 2>&1; then
-		log "flatpak not found, installing flatpak"
-		sudo apt-get install -y flatpak || true
-	fi
-	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || true
-
-	for name in "bitwarden" "discord" "steam" "bottles" "opentoonz"; do
-		id="${FLATPAK_MAP[$name]}"
-		if [ -n "$id" ]; then
-			install_flatpak_if_available "$id" || log "Please install $name manually"
-		fi
-	done
+	FLATPAKS=("${FLATPAK_MAP[bitwarden]}" "${FLATPAK_MAP[discord]}" "${FLATPAK_MAP[steam]}" "${FLATPAK_MAP[bottles]}" "${FLATPAK_MAP[opentoonz]}")
+	install_flatpaks "${FLATPAKS[@]}" || log "Some flatpak installs failed or were skipped"
 
 	if ! command -v fvm >/dev/null 2>&1; then
 		if command -v dart >/dev/null 2>&1; then

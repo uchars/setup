@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+python -m pip install konsave
+
 KONSAVE_FILE="$ROOT_DIR/kde_profiles/desktop.knsv"
 if command_exists konsave; then
     if [ -f "$KONSAVE_FILE" ]; then

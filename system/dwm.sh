@@ -20,6 +20,22 @@ else
     log "dwm already installed, skipping"
 fi
 
+if command_exists dwm; then
+    log "Registering dwm session for display managers"
+    sudo mkdir -p /usr/share/xsessions
+    sudo tee /usr/share/xsessions/dwm.desktop >/dev/null <<'EOF'
+[Desktop Entry]
+Name=dwm
+Comment=Dynamic window manager
+Exec=dwm
+TryExec=dwm
+Type=XSession
+DesktopNames=dwm
+EOF
+else
+    log "dwm binary not found; skipping display manager session registration"
+fi
+
 DWMBLOCKS_DIR="$HOME/work/dwmblocks"
 if ! command_exists dwmblocks; then
     log "Installing dwmblocks from source..."

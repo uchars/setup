@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Uses `command_exists` from scripts/helpers.sh (install.sh sources it before this file)
 NVM_DIR="$HOME/.nvm"
 
 if [[ ! -d "$NVM_DIR" ]]; then
