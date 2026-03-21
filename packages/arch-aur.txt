@@ -6,7 +6,6 @@ konsave
 clock-tui
 pipemixer
 cavasik
-xp-pen-tablet
 rofi-power-menu
 android-studio
 libcava
