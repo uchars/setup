@@ -1,0 +1,111 @@
+# Essentials
+polkit
+wget
+alacritty
+jq
+feh
+xclip
+pcsclite
+ccid
+rofi
+chezmoi
+vim
+tmux
+dmenu
+ttf-sourcecodepro-nerd
+woff2-font-awesome
+ttf-nerd-fonts-symbols
+ttf-jetbrains-mono-nerd ttf-jetbrains-mono
+vim
+man
+fzf
+unzip
+ripgrep
+fd
+openssh
+haruna
+vlc
+chromium
+firefox
+emacs
+plymouth
+imagemagick
+less
+
+# Desktop stuff
+bitwarden
+plasma
+dolphin
+
+# Audio
+alsa-utils
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-docs
+wiremix
+pulsemixer
+cava
+
+# Build depencencies
+ninja
+cmake
+base-devel
+libx11
+libxft
+libxrender
+xorg-server
+xorg-xinit
+xorg-xsetroot
+libfido2
+
+# File browser dependencies
+gvfs
+gvfs-smb
+smbclient
+ark
+ffmpegthumbnailer
+tumbler
+libgsf
+gvfs-mtp
+
+# Dev stuff
+intellij-idea-community-edition
+docker
+docker-compose
+fvm
+
+# Network
+networkmanager
+nm-connection-editor
+network-manager-applet
+
+# Gaming
+gamescope
+steam
+mangohud
+discord
+obs-studio
+wine
+wine-gecko
+wine-mono
+
+# System Stuff
+bluez
+breeze-gtk
+bluez-utils
+bluetui
+cups
+cups-pdf
+hplip
+print-manager
+brightnessctl
+scrot
+
+# Art
+krita
+gimp
+blender
+inkscape
+fastfetch
+opentoonz

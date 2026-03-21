@@ -1,0 +1,13 @@
+yubico-authenticator-bin
+tumbler-extra-thumbnailer
+plymouth-theme-simple-image-git
+plymouth-theme-hexagon-dots-git
+konsave
+clock-tui
+pipemixer
+cavasik
+rofi-power-menu
+android-studio
+libcava
+visual-studio-code-bin
+bottles
