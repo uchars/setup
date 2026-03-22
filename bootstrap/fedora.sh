@@ -23,8 +23,6 @@ bootstrap_fedora() {
   log "Installing DNF packages"
   sudo dnf install -y "${PKGS_DNF[@]}" || log "Some dnf packages failed to install"
 
-  sudo dnf remove -y firefox
-
   sudo dnf group install -y development-tools
 
   if command_exists docker; then

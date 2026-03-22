@@ -39,7 +39,6 @@ bootstrap_mint() {
 		wget https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/opentabletdriver-0.6.6.2-1-x64.deb -O $HOME/Downloads/opentablet.deb && sudo apt install -y $HOME/Downloads/opentablet.deb
 		systemctl --user enable opentabletdriver.service --now
 	fi
-	sudo apt remove firefox -y
 	sudo apt autoremove -y
 
 	log "Mint bootstrap completed"
