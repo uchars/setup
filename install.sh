@@ -11,6 +11,7 @@ source "$ROOT_DIR/scripts/helpers.sh"
 RUN_PLYMOUTH=false
 RUN_GNOME=false
 RUN_KDE=false
+RUN_FLATPAK=true
 for arg in "$@"; do
   case "$arg" in
     --nvidia)
@@ -39,6 +40,7 @@ log "Detected distro: $DISTRO"
 case "$DISTRO" in
   arch|cachyos)
   source "$ROOT_DIR/bootstrap/arch.sh" | tee $HOME/.local/bootstrap.log
+  RUN_FLATPAK=false
   ;;
   linuxmint|debian)
   source "$ROOT_DIR/bootstrap/mint.sh" | tee $HOME/.local/bootstrap-mint.log
@@ -55,7 +57,9 @@ esac
 log "Applying dotfiles"
 $HOME/.local/bin/chezmoi init --apply https://github.com/uchars/.files.git --force
 
-source "$ROOT_DIR/system/flatpak.sh" | tee $HOME/.local/flatpaks.log
+if [ "$RUN_FLATPAK" = true ] && [ -f "$ROOT_DIR/system/flatpak.sh" ]; then
+  source "$ROOT_DIR/system/flatpak.sh" | tee $HOME/.local/flatpaks.log
+fi
 source "$ROOT_DIR/system/system.sh" | tee $HOME/.local/system.log
 source "$ROOT_DIR/system/fonts.sh" | tee $HOME/.local/fonts.log
 if [ "$RUN_PLYMOUTH" = true ] && [ -f "$ROOT_DIR/system/plymouth.sh" ]; then

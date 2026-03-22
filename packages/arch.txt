@@ -12,10 +12,6 @@ chezmoi
 vim
 tmux
 dmenu
-ttf-sourcecodepro-nerd
-woff2-font-awesome
-ttf-nerd-fonts-symbols
-ttf-jetbrains-mono-nerd ttf-jetbrains-mono
 vim
 man
 fzf
