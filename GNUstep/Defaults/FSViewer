@@ -1,0 +1,226 @@
+{
+  .txt = {
+    editor = "xedit %s";
+    icon = "file-dot-txt";
+    viewer = "xedit %s";
+  };
+  HOME = home;
+  .tgz = {
+    icon = "file-dot-gz";
+  };
+  netscape = {
+    exec = "firefox %s";
+    extn = (.html, .shtml, .phtml);
+    icon = netscape;
+  };
+  WSIZE = 1280;
+  HSIZE = 720;
+  EXTN = (
+    .bmp,
+    .bz2,
+    .c,
+    .cgi,
+    .class,
+    .core,
+    .csh,
+    .dat,
+    .gif,
+    .gz,
+    .h,
+    .java,
+    .jpg,
+    .mp3,
+    .o,
+    .phtml,
+    .pl,
+    .png,
+    .rpm,
+    .sh,
+    .shtml,
+    .tgz,
+    .tif,
+    .txt,
+    .xbm,
+    .xcf,
+    .xpm,
+    .zip,
+    .html
+  );
+  ColumnWidth = 169;
+  SortOrder = 0;
+  .zip = {
+    icon = "file-dot-zip";
+  };
+  .htm = {
+    editor = "xemacs %s";
+    icon = "file-dot-html";
+    viewer = "netscape %s";
+  };
+  DIRECTORY = folder;
+  xedit = {
+    exec = "xedit %s";
+    extn = (.txt, .dat);
+    icon = "file-dot-txt";
+  };
+  ChangeLog = {
+    editor = "xemacs %s";
+    icon = "file-dot-txt";
+    viewer = "xemacs %s";
+  };
+  CONSOLE = {
+    exec = xterm;
+  };
+  .png = {
+    icon = "/usr/lib/GNUstep/Applications/FSViewer.app/tiff/file-dot-png.tif";
+    viewer = "feh --scale-down -g 1280x720 -Z";
+  };
+  .md = {
+    icon = "/usr/lib/GNUstep/Applications/FSViewer.app/tiff/file-readme.tif";
+    viewer = "alacritty -e nvim %s";
+    editor = "alacritty -e nvim %s";
+  };
+  DisplayDotFiles = 0;
+  .tif = {
+    editor = "gimp %s";
+    icon = "file-dot-tif";
+    viewer = "feh %s";
+  };
+  ROOT = {
+    icon = mycomputer;
+  };
+  App = FSViewer;
+  .c = {
+    editor = "xemacs %s";
+    icon = "file-dot-c";
+    viewer = "xemacs %s";
+  };
+  MAGICASCII = {
+    exec = "xedit %s";
+  };
+  .java = {
+    editor = "xemacs %s";
+    icon = "file-dot-java";
+    viewer = "xemacs %s";
+  };
+  .jpg = {
+    editor = "gimp %s";
+    icon = "file-dot-jpg";
+    viewer = "xv %s";
+  };
+  .html = {
+    editor = "xemacs %s";
+    icon = "file-dot-html";
+    viewer = "netscape %s";
+  };
+  .bz2 = {
+    icon = "file-dot-bz2";
+  };
+  xv = {
+    exec = "xv %s";
+    extn = (.jpg, .gif, .bmp, .xpm, .xbm);
+    icon = xv;
+  };
+  XPOS = 164;
+  .o = {
+    icon = "file-dot-o";
+  };
+  .class = {
+    icon = "file-dot-class";
+  };
+  YPOS = 164;
+  .xcf = {
+    editor = "gimp %s";
+    icon = "file-dot-xcf";
+    viewer = "gimp %s";
+  };
+  .rpm = {
+    icon = "file-dot-rpm";
+  };
+  .csh = {
+    icon = "file-dot-csh";
+  };
+  DisplaySVBG = 1;
+  .dat = {
+    editor = "xemacs %s";
+    icon = "file-dot-dat";
+    viewer = "xedit %s";
+  };
+  MAGICIMAGE = {
+    exec = "xv %s";
+  };
+  .shtml = {
+    editor = "xemacs %s";
+    icon = "file-dot-html";
+    viewer = "netscape %s";
+  };
+  mp3 = {
+    exec = "mpg123 %s";
+    extn = (.mp3);
+    icon = "file-dot-mp3";
+  };
+  MAGICPS = {
+    exec = "ghostview %s";
+  };
+  SHELF = ("/home/sterz_n");
+  .core = {
+    icon = "file-dot-core";
+  };
+  .pdf = {
+    icon = "/usr/lib/GNUstep/Applications/FSViewer.app/tiff/file-dot-pdf.tif";
+    viewer = "zathura %s";
+  };
+  .gif = {
+    icon = "file-dot-gif";
+    viewer = "feh %s";
+  };
+  xemacs = {
+    exec = "xemacs %s";
+    extn = (
+      .html,
+      .shtml,
+      .phtml,
+      .pl,
+      .txt,
+      .java,
+      .cgi,
+      .sh,
+      .csh,
+      .dat,
+      .c,
+      .h
+    );
+    icon = xemacs;
+  };
+  .xpm = {
+    editor = "gimp %s";
+    icon = "file-dot-xpm";
+    viewer = "xv %s";
+  };
+  ICONDIR = "/usr/lib/GNUstep/Applications/FSViewer.app";
+  .gz = {
+    icon = "file-dot-gz";
+  };
+  .mp3 = {
+    icon = "file-dot-mp3";
+    viewer = "mpg123 %s";
+  };
+  DEFAULT_IMG = "file-plain";
+  .sh = {
+    icon = "file-dot-sh";
+  };
+  DisplayMCListPixmap = 0;
+  SortDisplay = 0;
+  gimp = {
+    exec = "gimp %s";
+    extn = (.jpg, .gif, .bmp, .xcf, .xpm, .xbm, .png);
+    icon = wilber;
+  };
+  .tar.gz = {
+    icon = "file-dot-gz";
+  };
+  .bmp = {
+    editor = "gimp %s";
+    icon = "file-dot-bmp";
+    viewer = "xv %s";
+  };
+}

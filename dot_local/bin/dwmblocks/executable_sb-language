@@ -1,0 +1,16 @@
+#!/bin/sh
+
+get_lang() {
+    setxkbmap -query | awk '/layout:/ {print $2}'
+}
+
+case $BLOCK_BUTTON in
+    1)
+        kbdswitch.sh
+        ;;
+esac
+
+# display current language
+lang=$(get_lang)
+echo -n "^c#afa193^ :^d^ $lang"
+

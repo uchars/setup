@@ -1,0 +1,30 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".miamiherald.com"
+  [url-cookie "ak_bmsc" "4501A709A59446DE78D2D8CBAC022FAF~000000000000000000000000000000~YAAQnGITAjDEea2VAQAAspb57Bv2KpVqriwbnBoueUoXrJnb9Qg67OvEDZwOMRwztcQlQYfSs5tK9nC4S8wDzV5dtm4WKjIo4iLngP7Vq0zotpG+PYvoBz5xqIRwec8LYCAKPqtLoSGpGQxBxES/1ZPNNe3AZOx9zdi1ARfmM22sWYTRR8/It4C4Y7tb0VJibsOVkQ9BLG9SsfzTcb5D+FZ93AwYhKfB2Od396VKVvfmQrdswQepoywCx1ODjAurcJpmMluwo9Do3+5pUnC1ZjuI4FVv/LsP+oaYwmej6OXLtzb6ixKrIKeBtK0uSNQYfL0O5X1THPk7Q1MpZU3XZk9nhYEHGSJ4yXKE877ikfb8wCDf+6KatgW1vS74DxHWDkaiyn/s5ZG0QotKtGzC851JkrEW23elPKb35VxgbLpjWR6wlfSBg+t2ARoR1u3akfgFqfw0gskITe1BfglM9PV8DPKLQ4o=" "Mon Mar 31 18:12:11 2025 GMT" "/" ".miamiherald.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".miamiherald.com"
+  [url-cookie "bm_mi" "0FDFE9E4AD62BC132C59C6AE489CFA0D~YAAQnGITAiPEea2VAQAAzZX57Bu8SGeS569tpVzqdxPa1nh/9Tc6Yvr6ZrMmbKcau+2g7cah7SQotN01EqmhefbyztNyhKePZEpGVEE9X2ICB1kLnWXKGtMp5QsLpi/nWAUIaLwvfJJi9gP0SMPSWKzgEpw5Qr+FExG4bcSvIQ4ySvF2PGVIF4fCSZ32Dc0KpRcPWSJhaA7WCXR6dBc7l0kCuJmScs1x9ZH3hfX6hGgakJ25du+Lc3LYpXYUhVYPYFjQXD/OOmDAV4tqBkNrOsoFfv7LjzDoIK+GBXVRrWpXCzqap7jk7sERmaj3OAW7cJx7y7K2fCL4Z8fxTh6obE0D89iBthMmn1aMEnvNUbZMzKUFiaknJA==~1" "Mon Mar 31 18:12:11 2025 GMT" "/" ".miamiherald.com" t]
+  [url-cookie "bm_sv" "82C7A99B1A51212BBBC0E1B90598ADB9~YAAQnGITAiTEea2VAQAAzZX57BtXyTyW2I5wboey0KQqrEYxSYtOzlYvYnyn/dBhXGkJO6Fgy7IkTvzqzGw/8RSLaQA8amwNDca8bLNLyYzQiW8bZOafeNhwbjcFX4Iv+ihJYFAhnC9nbZHn3JhUfHe317/p9z+mkfrhxu3w54Ran8uicOGGJPV+2AnOsihA7u2LdyU95FSep97oZNp5TCdJ5MiPcc+Eq2no+twDNLHEtnrCerLC3AnbPmn4Y2wlgYlYmCY=~1" "Mon Mar 31 18:12:14 2025 GMT" "/" ".miamiherald.com" t])
+ ("wikipedia.org"
+  [url-cookie "WMF-Last-Access" "31-Mar-2025" "Fri, 02 May 2025 12:00:00 GMT" "/" "wikipedia.org" t]
+  [url-cookie "NetworkProbeLimit" "0.001" "Mon Mar 31 17:13:33 2025 GMT" "/" "wikipedia.org" t])
+ (".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "31-Mar-2025" "Fri, 02 May 2025 12:00:00 GMT" "/" ".wikipedia.org" t])
+ ("en.wikipedia.org"
+  [url-cookie "WMF-DP" "1cf" "Tue, 01 Apr 2025 00:00:00 GMT" "/" "en.wikipedia.org" t])
+ ("miamiherald.com"
+  [url-cookie "AKA_A2" "A" "Mon, 31-Mar-2025 17:12:14 GMT" "/" "miamiherald.com" t]
+  [url-cookie "sessionz" "maa%3a126617470441696862" "Tue, 31 Mar 2026 16:12:14 GMT" "/" "miamiherald.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; coding: utf-8-emacs-unix
+;; End:
+
+;;; cookies ends here

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+if [[ -f $HOME/.xprofile ]]; then
+    . "$HOME/.xprofile"
+fi
+
+if command -v dwmblocks >/dev/null 2>&1; then
+    dwmblocks &
+fi
+
+if command -v picom >/dev/null 2>&1; then
+    picom --no-fading-openclose &
+fi
+
+if command -v dunst >/dev/null 2>&1; then
+    dunst --config "$HOME/.config/dunst/dunstrc" &
+fi
+
+if [[ -f $HOME/.fehbg ]]; then
+    $HOME/.fehbg &
+fi
+
+exec dwm

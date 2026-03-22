@@ -1,0 +1,32 @@
+#!/bin/sh
+
+TERMINAL="alacritty"
+TUI="bluetui"
+
+get_bt_battery() {
+        for dev in $(bluetoothctl devices | awk '{print $2}'); do
+                if bluetoothctl info "$dev" | grep -q "Connected: yes"; then
+                        name=$(bluetoothctl info "$dev" | grep "Name" | awk -F': ' '{print $2}')
+                        battery=$(bluetoothctl info "$dev" | grep "Battery Percentage" | awk -F'[()]' '{print $2}')
+                        if [ -n "$battery" ]; then
+                                printf "%-12s\t%3s%%\n" "$name" "$battery"
+                        else
+                                echo "$name (Battery info n/a)"
+                        fi
+                fi
+        done
+}
+
+case $BLOCK_BUTTON in
+	1)
+                "$TERMINAL" --class sysscratch -e "$TUI"
+                ;;
+        3)
+                info=$(get_bt_battery)
+                notify-send "Bluetooth" "$info"
+                ;;
+esac
+
+num_connected=$(bluetoothctl devices Connected | wc -l)
+echo -n "^c#afa193^:^d^"
+echo -n " $num_connected"

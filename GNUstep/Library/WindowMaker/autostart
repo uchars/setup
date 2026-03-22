@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# Place applications to be executed when WindowMaker is started here.
+# This should only be used for non-X applications or applications that
+# do not support session management. Other applications should be restarted
+# by the WindowMaker session restoring mechanism. For that, you should
+# either set SaveSessionOnExit=YES or select "Save Session" in the Workspace
+# submenu of the root menu when all applications you want started are
+# running.
+#
+# WindowMaker will wait until this script finishes, so if you run any
+# commands that take long to execute (like a xterm), put a ``&'' in the
+# end of the command line.
+#
+# This file must be executable.
+#
+xset m 22/10 4
+
+if ! pgrep "wmcpuload" >/dev/null; then
+  wmcpuload &
+fi
+if ! pgrep "wmsystemtray" >/dev/null; then
+  wmsystemtray &
+fi
+if ! pgrep "nm-applet" >/dev/null; then
+  nm-applet &
+fi
+if ! pgrep "mpris-proxy" >/dev/null; then
+  mpris-proxy &
+fi
+# if ! pgrep "wmudmount" >/dev/null; then
+#   # wmudmount --no-default-config --blink-full-filesystems --exclude-system-volumes &
+# fi
+if ! pgrep "wmCalClock" >/dev/null; then
+  wmCalClock -24 &
+fi
+if ! pgrep "wmstickynotes" >/dev/null; then
+  wmstickynotes &
+fi
+if ! pgrep "wmnd" >/dev/null; then
+  wmnd -c orange -C yellow -i enp42s0 -w sepgraphs &
+fi
+if ! pgrep "wmamixer" >/dev/null; then
+  wmamixer -w &
+fi
+if ! pgrep "wmacpi" >/dev/null; then
+  wmacpi &
+fi
+WALLPAPER="$HOME/Nextcloud/Pictures/Wallpapers/joan_of_arc_3440_1440.png"
+FALLBACK_WP="$(pwd)/Backgrounds/firewatch.png"
+if [ -e $WALLPAPER ]; then
+  wmsetbg -f $WALLPAPER
+else
+  wmsetbg -f $FALLBACK_WP
+fi

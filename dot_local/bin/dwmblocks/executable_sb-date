@@ -1,0 +1,3 @@
+#!/bin/sh
+echo -n "^c#afa193^date:^d^"
+echo -n " $(date '+%a, %b %d, %Y [%H:%M:%S]')"

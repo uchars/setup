@@ -1,0 +1,121 @@
+{
+  FTitleColor = "#ffffff";
+  FrameBorderColor = "#b6b6b3";
+  MenuDisabledColor = "#9e9a9e";
+  IconTitleBack = "#4d748f";
+  PixmapPath = (
+    "/home/sterz_n/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/sterz_n/GNUstep/Library/WindowMaker/Backgrounds",
+    "/home/sterz_n/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/WindowMaker/Backgrounds",
+    "/usr/share/pixmaps"
+  );
+  HotCornerEdge = 2;
+  FTitleBack = (mhgradient, "#000000", "#3d637f", "#315c77", "#333f3e");
+  ClipTitleFont = "Verdana:bold:pixelsize=10";
+  MaximizeKey = "Mod4+Up";
+  MiniwindowPreviewBalloons = YES;
+  IconTitleFont = "Arial,sans serif:pixelsize=9";
+  LargeDisplayFont = "Trebuchet MS,sans serif:pixelsize=24";
+  PartialCaptureKey = "Mod4+S";
+  CenterKey = None;
+  IconificationStyle = none;
+  MoveDisplay = none;
+  IconTitleColor = white;
+  MoveToWorkspace2Key = "Shift+Mod4+2";
+  MenuTitleColor = "#ffffff";
+  MenuTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  HotCorners = YES;
+  SmoothWorkspaceBack = NO;
+  MoveTo6to12Head = None;
+  DbClickFullScreen = YES;
+  IconPosition = tlh;
+  ShadeSpeed = ultrafast;
+  WorkspaceBack = (
+    tpixmap,
+    "/home/sterz_n/GNUstep/Library/WindowMaker/Backgrounds/Joan+of+arc+battle+Patreon.jpg",
+    gray20
+  );
+  HighlightTextColor = "#000000";
+  EnforceIconMargin = YES;
+  WindowSnapping = YES;
+  AutoArrangeIcons = YES;
+  ClipTitleColor = "#fff38c";
+  MoveTo12to6Head = None;
+  HotCornerActions = (None, None, None, None);
+  WorkspaceBorder = LeftRight;
+  FrameFocusedBorderColor = "#b6b6b3";
+  WindowTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  WindowPlaceOrigin = (915, 454);
+  Workspace8Key = None;
+  Workspace9Key = None;
+  LHMaximizeKey = "Mod4+Left";
+  ResizebarBack = (mhgradient, "#000000", "#494c63", "#444661", "#202841");
+  MiniPreviewSize = 232;
+  Workspace4Key = "Mod4+4";
+  KbdModeLock = NO;
+  Workspace5Key = "Mod4+5";
+  Workspace6Key = None;
+  WorkspaceBorderSize = 2;
+  Workspace7Key = None;
+  Workspace1Key = "Mod4+1";
+  CloseRootMenuByLeftOrRightMouseClick = NO;
+  Workspace2Key = "Mod4+2";
+  MenuTitleExtendSpace = 0;
+  Workspace3Key = "Mod4+3";
+  MoveToWorkspace1Key = "Shift+Mod4+1";
+  RHMaximizeKey = "Mod4+Right";
+  FrameSelectedBorderColor = "#ffffff";
+  MiniaturizeKey = "Mod4+Down";
+  FocusNextKey = "Mod4+J";
+  ToggleKbdModeKey = "Mod4+space";
+  DragMaximizedWindow = RestoreGeometry;
+  OpaqueResize = YES;
+  MenuTextBack = (mhgradient, "#000000", "#494c63", "#444661", "#202841");
+  WindowPlacement = cascade;
+  HotCornerDelay = 250;
+  TitleJustify = center;
+  MenuTextColor = "#ffffff";
+  SingleClickLaunch = YES;
+  IconBack = (mhgradient, "#000000", "#595969", "#444661", "#202831");
+  AntialiasedText = YES;
+  MoveToWorkspace5Key = "Shift+Mod4+5";
+  WindowTitleExtendSpace = 0;
+  FocusPrevKey = "Mod4+K";
+  NewStyle = old;
+  WorkspaceNameDisplayPosition = top;
+  IconSize = 80;
+  MenuTextFont = "Trebuchet MS,sans serif:pixelsize=12";
+  AdvanceToNewWorkspace = YES;
+  MenuTitleBack = (mhgradient, "#000000", "#3d637f", "#315c77", "#333f3e");
+  SnapToTopMaximizesFullscreen = YES;
+  CloseKey = "Shift+Mod4+C";
+  HighlightColor = "#ffe0ac";
+  FocusMode = sloppy;
+  Workspace10Key = None;
+  MoveToWorkspace3Key = "Shift+Mod4+3";
+  CClipTitleColor = "#718a79";
+  IconSlideSpeed = ultrafast;
+  MenuStyle = normal;
+  IconPath = (
+    "/home/sterz_n/GNUstep/Library/Icons",
+    "/home/sterz_n/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/sterz_n/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Icons",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/pixmaps"
+  );
+  ModifierKey = Mod4;
+  PTitleBack = (mhgradient, "#000000", "#7390aa", "#405e81", "#3d4a59");
+  MenuTextExtendSpace = 0;
+  UTitleColor = gray;
+  ViKeyMenus = YES;
+  UTitleBack = (mhgradient, "#000000", "#595969", "#444661", "#202831");
+  CirculateRaise = YES;
+  PTitleColor = "#ffffff";
+  ResizeDisplay = none;
+  MoveToWorkspace4Key = "Shift+Mod4+4";
+}

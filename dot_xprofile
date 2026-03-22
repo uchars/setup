@@ -1,0 +1,13 @@
+#!/bin/bash
+. $HOME/.bashrc
+
+xrandr --output DisplayPort-0 --mode 3440x1440 --rate 143.92 --primary --pos 0x0
+xrandr --output HDMI-A-1 --mode 1920x1080 --pos 760x1440
+
+if [[ -f $HOME/.fehbg ]]; then
+    $HOME/.fehbg &
+fi
+
+if [[ -f $HOME/.Xresources ]]; then
+    xrdb "$HOME/.Xresources"
+fi

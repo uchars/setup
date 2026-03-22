@@ -1,0 +1,32 @@
+{
+  default.default = {
+    Icon = default.default.xpm;
+  };
+  firefox.Firefox = {
+    Icon = firefox.Firefox.xpm;
+  };
+  fsviewer.FSViewer = {
+    Icon = fsviewer.FSViewer.xpm;
+  };
+  steam_app_1364780.steam_app_1364780 = {
+    Icon = steam_app_1364780.steam_app_1364780.xpm;
+  };
+  thunar.Thunar = {
+    Icon = Drawer.xpm;
+  };
+  Thunar.Thunar = {
+    Icon = Bookshelf.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
+  };
+  "transmission-qt.transmission" = {
+    Icon = "transmission-qt.transmission.xpm";
+  };
+  fileViewer.FileViewer = {
+    AlwaysUserIcon = No;
+  };
+  Logo.WMDock = {
+    Icon = Penguin.xpm;
+  };
+}
