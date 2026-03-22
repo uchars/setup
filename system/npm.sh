@@ -12,11 +12,6 @@ if [[ ! -d "$NVM_DIR" ]]; then
         log "curl not available; cannot install NVM automatically"
         return 0
     fi
-
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-
 else
     log "NVM already installed"
     export NVM_DIR="$HOME/.nvm"

@@ -46,7 +46,7 @@ if ! command_exists dwmblocks; then
     fi
 
     pushd "$DWMBLOCKS_DIR" >/dev/null
-    make clean
+    sudo make clean
     sudo make install -j$(($(nproc)/2))
     popd >/dev/null
 
@@ -54,3 +54,13 @@ if ! command_exists dwmblocks; then
 else
     log "dwmblocks already installed, skipping"
 fi
+
+if ! command_exists cargo; then
+    curl https://sh.rustup.rs -sSf | sh -s -- -y
+    . "$HOME/.cargo/env"
+fi
+cargo install bluetui
+cargo install wiremix
+cargo install clock-tui
+cargo install alacritty
+

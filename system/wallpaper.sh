@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-WALLPAPER="$ROOT_DIR/wallpapers/foggy_mountain.jpg"
-ln -sf $WALLPAPER $HOME/.local/wallpaper.jpg
+WALLPAPER="$ROOT_DIR/wallpapers/foggy_mountain.png"
+ln -sf $WALLPAPER $HOME/.local/wallpaper.png
 
 if command_exists feh; then
     if [[ ! -f "$HOME/.fehbg" ]]; then

@@ -43,7 +43,6 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 pipewire-docs
-wiremix
 pulsemixer
 cava
 
@@ -94,7 +93,6 @@ wine-mono
 bluez
 breeze-gtk
 bluez-utils
-bluetui
 cups
 cups-pdf
 hplip

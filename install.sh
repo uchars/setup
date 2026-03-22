@@ -40,7 +40,7 @@ case "$DISTRO" in
   arch|cachyos)
   source "$ROOT_DIR/bootstrap/arch.sh" | tee $HOME/.local/bootstrap.log
   ;;
-  mint|debian)
+  linuxmint|debian)
   source "$ROOT_DIR/bootstrap/mint.sh" | tee $HOME/.local/bootstrap-mint.log
   ;;
   fedora)
@@ -53,8 +53,9 @@ case "$DISTRO" in
 esac
 
 log "Applying dotfiles"
-chezmoi init --apply https://github.com/uchars/.files.git --force
+$HOME/.local/bin/chezmoi init --apply https://github.com/uchars/.files.git --force
 
+source "$ROOT_DIR/system/flatpak.sh" | tee $HOME/.local/flatpaks.log
 source "$ROOT_DIR/system/system.sh" | tee $HOME/.local/system.log
 source "$ROOT_DIR/system/fonts.sh" | tee $HOME/.local/fonts.log
 if [ "$RUN_PLYMOUTH" = true ] && [ -f "$ROOT_DIR/system/plymouth.sh" ]; then
@@ -67,6 +68,7 @@ source "$ROOT_DIR/system/dwm.sh" | tee $HOME/.local/dwm.log
 source "$ROOT_DIR/system/wallpaper.sh" | tee $HOME/.local/wallpaper.log
 source "$ROOT_DIR/system/npm.sh" | tee $HOME/.local/npm.log
 source "$ROOT_DIR/system/nvim.sh" | tee $HOME/.local/nvim.log
+source "$ROOT_DIR/system/fvm.sh" | tee $HOME/.local/fvm.log
 if [ "$RUN_KDE" = true ] && [ -f "$ROOT_DIR/system/kde.sh" ]; then
   source "$ROOT_DIR/system/kde.sh" | tee $HOME/.local/kde.log
 fi
