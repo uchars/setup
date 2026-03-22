@@ -55,4 +55,8 @@ fi
 
 systemctl --user enable --now pipewire pipewire-pulse wireplumber gvfs-daemon
 
+yay -S --noconfirm --needed opentabletdriver
+sudo mkinitcpio -P
+sudo rmmod wacom hid_uclogic
+
 source "$ROOT_DIR/bootstrap/arch-boot.sh"
