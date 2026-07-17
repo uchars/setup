@@ -21,11 +21,10 @@ export ENABLE_NVIDIA
 source "$ROOT_DIR/bootstrap/fedora.sh" || true
 
 log "Applying dotfiles"
-$HOME/.local/bin/chezmoi init --apply https://github.com/uchars/.files.git --force
+chezmoi init --apply https://github.com/uchars/.files.git --force
 
 source "$ROOT_DIR/system/system.sh" || true
 source "$ROOT_DIR/system/fonts.sh" || true
-source "$ROOT_DIR/system/plymouth.sh" || true
 source "$ROOT_DIR/system/dwm.sh" || true
 source "$ROOT_DIR/system/npm.sh" || true
 source "$ROOT_DIR/system/nvim.sh" || true

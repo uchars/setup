@@ -60,7 +60,6 @@ if ! command_exists cargo; then
     . "$HOME/.cargo/env"
 fi
 cargo install bluetui
-cargo install wiremix
 cargo install clock-tui
 cargo install alacritty
 
