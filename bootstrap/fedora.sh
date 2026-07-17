@@ -19,7 +19,7 @@ bootstrap_fedora() {
   sudo dnf install -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
   sudo dnf install -y mesa-va-drivers-freeworld
 
-  PKGS_DNF=(wiremix pipewire-libs dbus-devel pkgconf-pkg-config runc cups chezmoi ripgrep fzf source-foundry-hack-fonts cmake libxcb-devel xcb-util-devel xcb-util-wm-devel alacritty python3-pip fastfetch make gcc krita opentoonz steam docker picom @base-x rofi xrandr dunst feh compat-ffmpeg4 golang ninja clang eglinfo git make gcc libXft-devel libX11-devel libXinerama-devel xorg-x11-server-Xorg xorg-x11-xinit)
+  PKGS_DNF=(firefox wiremix pipewire-libs dbus-devel pkgconf-pkg-config runc cups chezmoi ripgrep fzf source-foundry-hack-fonts cmake libxcb-devel xcb-util-devel xcb-util-wm-devel alacritty python3-pip fastfetch make gcc krita opentoonz steam docker picom @base-x rofi xrandr dunst feh compat-ffmpeg4 golang ninja clang eglinfo git make gcc libXft-devel libX11-devel libXinerama-devel xorg-x11-server-Xorg xorg-x11-xinit)
 
   log "Updating dnf repositories"
   sudo dnf makecache --refresh || true

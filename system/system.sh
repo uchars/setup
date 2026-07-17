@@ -15,10 +15,15 @@ enable_service() {
   sudo systemctl is-enabled "$1" &>/dev/null || sudo systemctl enable --now "$1"
 }
 
+enable_user_service() {
+  systemctl --user is-enabled "$1" &>/dev/null || systemctl --user enable --now "$1"
+}
+
 enable_service NetworkManager
 enable_service bluetooth
 enable_service cups
 enable_service pcscd
+enable_user_service pipewire
 
 git config --global user.name "Nils"
 git config --global user.email "40796807+uchars@users.noreply.github.com"
