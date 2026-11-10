@@ -30,5 +30,13 @@ source "$ROOT_DIR/system/npm.sh" || true
 source "$ROOT_DIR/system/nvim.sh" || true
 source "$ROOT_DIR/system/fvm.sh" || true
 
+if [ -f "$ROOT_DIR/kde.knsv" ]; then
+  log "Creating backup of current KDE config, just in case..."
+  konsave -s backup --force
+  log "Applying KDE configuration"
+  konsave -i $ROOT_DIR/kde.knsv
+  konsave -a kde
+fi
+
 log "Done"
 

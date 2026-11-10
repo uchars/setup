@@ -12,10 +12,12 @@ fi
 # ---- services ------------------------------------------------
 
 enable_service() {
+  log "enable $1 service"
   sudo systemctl is-enabled "$1" &>/dev/null || sudo systemctl enable --now "$1"
 }
 
 enable_user_service() {
+  log "enable $1 user service"
   systemctl --user is-enabled "$1" &>/dev/null || systemctl --user enable --now "$1"
 }
 
@@ -24,6 +26,10 @@ enable_service bluetooth
 enable_service cups
 enable_service pcscd
 enable_user_service pipewire
+
+if command_exists qemu-kvm; then
+  enable_service libvirtd
+fi
 
 git config --global user.name "Nils"
 git config --global user.email "40796807+uchars@users.noreply.github.com"

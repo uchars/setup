@@ -4,6 +4,10 @@ log() {
   printf "\n==> %s\n" "$1"
 }
 
+ensure_sudo() {
+  sudo -v || { log "sudo is required"; exit 1; }
+}
+
 command_exists() {
   command -v "$1" &>/dev/null
 }
